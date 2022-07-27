@@ -1,0 +1,590 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Serif 4", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+main {
+  margin: -8px;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.container-flex {
+  display: flex;
+  background-color: rgb(7, 31, 44);
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+}
+
+.container-flex > div {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 5px 5px 15px black;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.container-flex img {
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+}
+
+.container-flex div div:last-child {
+  width: 120px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(7, 31, 44);
+  color: white;
+  z-index: 1000;
+}
+
+.menu a:last-child {
+  margin-left: auto;
+}
+
+a {
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+a:hover {
+  background-color: rgb(78, 162, 190);
+  color: white;
+  font-weight: bolder;
+}
+header {
+  margin-top: -10px;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+#destinos {
+  border: 0.5px black solid;
+  text-align: center;
+  font-size: 2em;
+  background-color: slategray;
+  margin: 0px;
+  padding: 10px;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+}
+
+.menu2 {
+  background: url(images/hero_2.jpg) no-repeat center center fixed;
+  width: 100%;
+  height: 90vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 10px 10px 10px black;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.dicas {
+  display: flex;
+  background: url(images/hero_2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  margin: 0px;
+}
+
+.dicas > div {
+  background-color: rgb(241, 190, 132);
+  height: 280px;
+  width: 300px;
+  justify-content: space-around;
+  box-shadow: 5px 5px 15px black;
+  border-radius: 8px;
+  padding: 10px 10px;
+  text-overflow: ellipsis;
+  margin: 10px;
+}
+
+.dicas h2 {
+  position: relative;
+  top: 2px;
+  align-items: center;
+  text-align: center;
+  font-size: 23px;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.dicas p {
+  position: relative;
+  left: 10px;
+  top: 20px;
+  font-size: 15px;
+  word-wrap: break-word;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 1px;
+  padding: 1px;
+}
+
+.destinos {
+  background-color: whitesmoke;
+  display: grid;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .destinos {
+    grid-template-areas:
+      "lisboa porto"
+      "algarve cascais"
+      "alentejo alentejo"
+      "campismo campismo"
+      "campismo campismo";
+    gap: 1px;
+  }
+  .campismo div:nth-child(3) {
+    grid-area: button;
+    position: absolute;
+    bottom: 35px;
+    right: 42%;
+    z-index: 10000;
+  }
+  .campismo div:first-child {
+    grid-area: text;
+    color: white;
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    top: 280px;
+    left: 20px;
+    margin: 1px;
+    white-space: normal;
+    word-wrap: break-word;
+    z-index: 100000;
+  }
+
+  .campismo div:nth-child(2) {
+    grid-area: text2;
+    color: white;
+    position: absolute;
+    top: 320px;
+    left: 20px;
+    margin: 1px;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 320px;
+    z-index: 100000;
+  }
+  .campismo img {
+    background: url(images/campismo.jpeg) no-repeat center center;
+    position: relative;
+    width: 101vw;
+    height: 50vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .lisboa {
+    background: url(images/lisboa.jpeg) no-repeat center center;
+    grid-area: lisboa;
+    position: relative;
+    width: 50vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .porto {
+    background: url(images/porto.jpeg) no-repeat center center;
+    grid-area: porto;
+    position: relative;
+    width: 50vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .algarve {
+    background: url(images/algarve.png) no-repeat center center;
+    grid-area: algarve;
+    position: relative;
+    width: 50vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .cascais {
+    background: url(images/cascais.jpeg) no-repeat center center;
+    grid-area: cascais;
+    position: relative;
+    width: 50vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .alentejo {
+    background: url(images/alentejo.png) no-repeat center center;
+    grid-area: alentejo;
+    position: relative;
+    width: 101.5vw;
+    height: 30vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .destinos {
+    grid-template-areas:
+      "lisboa porto algarve campismo campismo"
+      "alentejo alentejo cascais campismo campismo";
+    gap: 1px;
+    margin-left: 3px;
+  }
+  .campismo div:nth-child(3) {
+    grid-area: button;
+    position: absolute;
+    bottom: 20px;
+    right: 20%;
+  }
+  .campismo div:first-child {
+    grid-area: text;
+    color: black;
+    position: absolute;
+    font-size: 1.5em;
+    top: 400px;
+    margin: 1px;
+    white-space: normal;
+    word-wrap: break-word;
+    z-index: 10000;
+  }
+
+  .campismo div:nth-child(2) {
+    grid-area: text2;
+    color: black;
+    position: absolute;
+    top: 440px;
+    margin: 1px;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 350px;
+    z-index: 10000000;
+  }
+  .campismo img {
+    background: url(images/campismo.jpeg) no-repeat center center;
+    position: relative;
+    width: 36vw;
+    height: 40vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .lisboa {
+    background: url(images/lisboa.jpeg) no-repeat center center;
+    grid-area: lisboa;
+    position: relative;
+    width: 20vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .porto {
+    background: url(images/porto.jpeg) no-repeat center center;
+    grid-area: porto;
+    position: relative;
+    width: 20vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .algarve {
+    background: url(images/algarve.png) no-repeat center center;
+    grid-area: algarve;
+    position: relative;
+    width: 20vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .cascais {
+    background: url(images/cascais.jpeg) no-repeat center center;
+    grid-area: cascais;
+    position: relative;
+    width: 20vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .alentejo {
+    background: url(images/alentejo.png) no-repeat center center;
+    grid-area: alentejo;
+    position: relative;
+    width: 40.5vw;
+    height: 25vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.campismo {
+  display: grid;
+  grid-area: campismo;
+  grid-template-areas:
+    "image image"
+    "texto texto"
+    "texto2 texto2"
+    "button button";
+  position: relative;
+  background-color: whitesmoke;
+}
+
+.campismo div:nth-child(4) {
+  grid-area: image;
+}
+
+.destinos div {
+  font-family: "Source Serif 4", sans-serif;
+  color: white;
+  margin: 3px;
+}
+
+.lisboa div:first-child {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.lisboa div:nth-child(2) {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.lisboa div:nth-child(3) {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+.porto div:first-child {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.porto div:nth-child(2) {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.porto div:nth-child(3) {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.algarve div:first-child {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.algarve div:nth-child(2) {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.algarve div:nth-child(3) {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.cascais div:first-child {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.cascais div:nth-child(2) {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.cascais div:nth-child(3) {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.alentejo div:first-child {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.alentejo div:nth-child(2) {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.alentejo div:nth-child(3) {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fotos {
+    display: grid;
+    position: absolute;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    align-self: center;
+    justify-self: center;
+    gap: 10px;
+    margin: 5px;
+  }
+  .fotos img {
+    width: 84vw;
+    height: 50vh;
+    position: relative;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 601px) {
+  .fotos:hover {
+    width: 500px;
+  }
+  .fotos {
+    display: grid;
+    position: absolute;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
+    justify-self: center;
+    gap: 10px;
+    margin: 5px;
+    margin-left: 80px;
+    transition: 2s width;
+  }
+  .fotos img {
+    width: 30vw;
+    height: 40vh;
+    position: relative;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .fotos {
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    align-self: center;
+    justify-self: center;
+    gap: 10px;
+    margin: 5px;
+    margin-left: 80px;
+  }
+  .fotos img {
+    width: 30vw;
+    height: 40vh;
+    position: relative;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+
+.fotos img {
+  border-radius: 15px;
+  transition-duration: 1s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(1, 0.11, 0.22, 1.41);
+  transition-delay: 0.5s;
+}
+
+.fotos img:hover {
+  border-radius: 15px;
+  transform: rotate(8deg);
+  opacity: 0.5;
+}
+
+.fotos > div > p {
+  position: absolute;
+  background-color: red;
+  top: -30px;
+  right: 10px;
+  padding: 10px;
+}
