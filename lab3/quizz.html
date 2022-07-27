@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="autor" content="Gabriel Deus" />
+    <meta name="keywords" content="Melbourne, Australia, Geografia, Férias" />
+    <meta name="description" content="Website sobre Melbourne" />
+    <title>Melbourne</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/Koala.ico" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+      </style>
+  </head>
+    <body>
+        <header>
+          <header>
+            <h1>Melbourne</h1>
+            <figure>
+              <img src="images/melbourne.jpg" alt="Imagem de Melbourne">
+              <figcaption>
+                <details>Cidade de Melbourne, imagem retirada do Google</details>
+              </figcaption>
+            </figure>
+         </header>
+         <nav>
+          <br>
+          <a class="texto" href="index.html"> <b>Introdução 📝</b></a>
+        <b>|</b>
+        <a class="texto" href="local.html"><b>Localização 📍</b></a>
+        <b>|</b>
+        <a class="texto" href="multimedia.html "><b>Multimédia 📷</b></a>
+        <b>|</b>
+        <a class="texto" href="info.html"><b>Informação 📰</b></a>
+        <b>|</b>
+        <a class="texto" href="quizz.html"><b>Quizz 🤔</b></a>
+        <b>|</b>
+        <a class="texto" href="html5-css.html"><b>HTML5 & CSS 🖇</b></a>
+        <b>|</b>
+        <a class="texto" href="../index.html"><b>Home 🏠</b></a>
+        <br>
+        </nav>
+        <main>
+          <section>
+            <h3>Quizz</h3>
+            <p>Nesta página o utlizador irá testar os seus conhecimentos acerca da cidade de Melbourne com vários quizzes.</p>
+          </section>
+          <section>
+              <form action="mailto: gabrieldeus2002@gmail.com" enctype="multipart/form-data" method="post">
+                  <fieldset style="background-color: lightskyblue; border:1; border-radius: 10px; border-width: 0px;">
+                  <legend style="font-size: 1.5em; text-align: center"><b>Quizz sobre Melbourne</b></legend>
+                  <fieldset style="border: 1px black solid; border-radius: 8px; border-width: 0.01; background-color: lightblue;">
+                      <legend style="font-size: 1.2em;"><b>Info</b></legend>
+                      <ul>
+                      <li class="quizz">Nome: <br> <input type="text" name="nome" autofocus required></li>
+                      <li class="quizz">Apelido: <br> <input type="text" name="apelido"></li>
+                      <li class="quizz">Email: <br> <input type="email" name="email" required form="quizz.html"></li>
+                      <li class="quizz">Telefone: <br> <input type="text" name="telefone" pattern="123-456-789" placeholder="XXX-XXX-XXX"></li>
+                    </ul>
+                      <fieldset style="border-radius: 8px; border: 2px solid black; background-color: lightpink;">
+                          <legend style="font-size: 1.2em;"><b>Perguntas</b></legend>
+                          <p>Desporto mais popular: <input type="text" name="p1" autocomplete="off" size="40" placeholder="Introduza aqui a sua resposta" maxlength="40"></p>
+                          <p>Qual é o edificío mais antigo em Melbourne?</p>
+                          <input type="radio" id="f" name="oldest" value="Finders Street Station">
+                          <label for="f">Finders Street Station</label><br>
+                          <input type="radio" id="m" name="oldest" value="Melbourne Cricket Ground">
+                          <label for="m">Melbourne Cricket Ground</label><br>
+                          <input type="radio" id="mt" name="oldest" value="Mitre Tavern">
+                          <label for="mt">Mitre Tavern</label><br>
+                          <input type="radio" id="st" name="oldest" value="St James' Old Cathedral">
+                          <label for="st">St James' Old Cathedral</label><br>
+                          <p>Quais são as linguas mais faladas em Melbourne?</p>
+                          <input type="checkbox" id="l1" name="l1" value="Inglês">
+                          <label for="l1">Inglês</label><br>
+                          <input type="checkbox" id="l2" name="l2" value="Português">
+                          <label for="l2">Português</label><br>
+                          <input type="checkbox" id="l3" name="l3" value="Mandarim">
+                          <label for="l3">Mandarim</label><br>
+                          <input type="checkbox" id="l4" name="l4" value="Alemão">
+                          <label for="l4">Alemão</label><br>
+                          <input type="checkbox" id="l5" name="l5" value="Arábico">
+                          <label for="l5">Arábico</label><br>
+                          <p>Fundada em: <input type="date" name="p4"></p><br>
+                          <p>Estado: 
+                          <select name="estado" id="estado">
+                              <option value="t">Tasmânia</option>
+                              <option value="ao">Australia Ocidental</option>
+                              <option value="v">Vitória</option>
+                              <option value="am">Australia Meridional</option>
+                          </select> </p><br>
+                          <p> Em que continente se situa a cidade:
+                          <input list="continente" name="continente">
+                          <datalist id="continente">
+                                    <option value="Europa"></option>
+                                    <option value="América do Sul"></option>
+                                    <option value="América do Norte"></option>
+                                    <option value="Oceania"></option>
+                                    <option value="África"></option>
+                                    <option value="Ásia"></option>
+                          </datalist> </p><br>
+                          <p>População: <input type="number" name="p7"></p><br>
+                          <p>Fotografias que tirou na cidade (campo não obrigatório) <input type="image" id="files" name="files" multiple></p>
+                          <label for="files"></label><br>
+                          <p>Que cor é que vem a sua cabeça quando pensa em Melbourne: <input type="color" name="p6"></p><br>
+                          <p>De 0 a 10 o quanto gosta de Melbourne: <input type="range" name="p8" max="10" min="1"></p><br>
+                          <p>Deixe um comentário:</p>
+                          <textarea name="comentario" id="comentario" cols="50" rows="5"></textarea>
+                          <br>
+                          <input type="submit" value="Submit">
+                      </fieldset>
+                  </fieldset>
+              </fieldset></form>
+          </section>
+        </main> 
+        <br>
+        <footer>
+          Gabriel Deus - a22001658 ; Universidade Lusófona de Humanidades e Tecnologias, 2º ano em Informática de Gestão
+        </footer>
+  </body>
+</html>
